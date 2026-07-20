@@ -14,7 +14,12 @@ body {
   color: var(--fg);
   background: var(--bg);
   line-height: 1.6;
+  /* make body a full-height flex column so the footer can sit at the bottom */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 
 .container {
   max-width: 760px;
@@ -205,7 +210,8 @@ main {
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);
-  margin-top: 3rem;
+  /* auto top-margin pushes the footer to the bottom when content is short */
+  margin-top: auto;
   padding: 1.5rem 0;
   color: var(--muted);
   font-size: 0.875rem;
