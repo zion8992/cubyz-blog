@@ -1,5 +1,5 @@
 ---
-title: "My GREAT Experience with the Cubyz Community"
+title: "Welcome"
 date: 2026-03-14
 authors: ["zion8992"]
 tags: ["go", "hugo"]
