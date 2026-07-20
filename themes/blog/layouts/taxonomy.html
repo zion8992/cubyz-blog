@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <h1>Authors</h1>
+  <ul class="author-list">
+    {{ range .Data.Terms.Alphabetical }}
+      <li>
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+        <span class="count">({{ .Count }} post{{ if ne .Count 1 }}s{{ end }})</span>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
