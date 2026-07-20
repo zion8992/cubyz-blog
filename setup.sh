@@ -1,3 +1,5 @@
-snap install hugo
+#!/usr/bin/env bash
+set -e
 
-hugo build
+sudo snap install hugo
+hugo --minify --baseURL "${PAGES_BASE_URL}/"
