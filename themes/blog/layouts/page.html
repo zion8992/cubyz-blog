@@ -15,7 +15,11 @@
 
     {{ with .Params.tags }}
       <div class="tags">
-        {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
+        {{ range . }}
+          {{ with $.Site.GetPage (printf "/tags/%s" (urlize .)) }}
+            <a class="tag" href="{{ .RelPermalink }}">#{{ .Title }}</a>
+          {{ end }}
+        {{ end }}
       </div>
     {{ end }}
   </article>
