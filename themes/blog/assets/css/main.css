@@ -1,17 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+/* ============== */
+/* Themes */
+/* ============== */
+
+/* Light Mode */
 :root {
   --active: #cf6a2b;
   --author: #2396a8;
-  --bg: #f8e7dc;
+  --bg: #f9ece3;
+  --nav: #fbf3ed;
+  --color: black;
 }
+
+/* Dark Mode -- Doesn't attract bugs */
+[data-theme="dark"] {
+  --active: #e8834a;
+  --author: #4cc3d6;
+  --bg: #1a1a1e;
+  --nav: #232329;
+  --color: white;
+}
+
 
 body {
   font-family: "IBM Plex Mono", monospace;
   background-color: var(--bg);
+  color: var(--color);
 }
 
+/* ============== */
 /* Webpage Content */
+/* ============== */
+
 main {
   margin-left: 450px;
   margin-right: 450px;
@@ -33,9 +54,10 @@ nav {
   align-items: center;
   gap: 2rem;
   padding: 1rem 2rem;
-  background: #fff; /* fixed navs need a background so content doesn't show through */
+  background: var(--nav); /* fixed navs need a background so content doesn't show through */
 
   border-bottom: 1px solid black;
+  border-top: 3px solid var(--active)
 }
 
 nav ul {
@@ -46,9 +68,27 @@ nav ul {
   padding: 0;
 }
 
-nav ul a {
-  color: black;
+/* shared "nav item" look for links AND the toggle button */
+nav ul a,
+nav ul button {
+  color: var(--color);
   text-decoration: none;
+  padding: 0.4rem 0.8rem;          /* space so the background looks nice */
+  border: 1px solid transparent;   /* reserves the space — no jump on hover */
+  border-radius: 10px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+  /* button-only resets (harmless on links) */
+  background: none;
+  font-family: inherit;   /* buttons default to the UA font, not IBM Plex Mono */
+  font-size: inherit;     /* buttons default to a smaller size */
+  cursor: pointer;
+}
+
+nav ul a:hover,
+nav ul button:hover {
+  border-color: color-mix(in srgb, var(--author) 60%, transparent);
+  background-color: color-mix(in srgb, var(--author) 15%, transparent);
 }
 
 nav ul a.active {
@@ -59,10 +99,13 @@ nav ul a.active {
 nav .site-title {
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: var(--color);
 }
 
-/* Posts List */
+/* ============== */
+/* Posts */
+/* ============== */
+
 .post-list {
 
 }
@@ -71,6 +114,11 @@ nav .site-title {
   list-style-type: none;
   border-left: 2px solid black;
   padding-left: 20px;
+}
+[data-theme="dark"] {
+  .post-item {
+    border-left: 2px solid var(--author);
+  }
 }
 
 .post-link {
@@ -94,4 +142,11 @@ nav .site-title {
 .tag {
   color: var(--author);
   text-decoration: none;
+}
+
+.tags {
+  padding: 10px;
+  background-color: var(--nav);
+  border: 1px solid var(--bg);
+  border-radius: 5px;;
 }

@@ -8,10 +8,11 @@
       {{ end }}
       · {{ .ReadingTime }} min read
     </div>
-
+    <hr><br>
     <div class="post-content">
       {{ .Content }}
     </div>
+
 
     {{ with .Params.tags }}
       <div class="tags">
@@ -22,5 +23,5 @@
         {{ end }}
       </div>
     {{ end }}
-  </article>
+    </article>
 {{ end }}

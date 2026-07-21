@@ -1,5 +1,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<script>
+    document.documentElement.dataset.theme = localStorage.getItem('theme') ?? '';
+</script>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
