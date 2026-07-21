@@ -1,4 +1,5 @@
-<nav class="main-nav">
+<nav>
+  <a class="site-title" href="/">{{ site.Title }}</a>
   <ul>
     {{ range site.Menus.main }}
       {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}

@@ -4,7 +4,7 @@
     <div class="post-meta">
       {{ .Date.Format "January 2, 2006" }}
       {{ with .Params.authors }} · by
-        {{ range $i, $a := . }}{{ if $i }}, {{ end }}<a href="{{ (printf "/authors/%s" (urlize .)) | relURL }}">{{ . }}</a>{{ end }}
+        {{ range $i, $a := . }}{{ if $i }}, {{ end }}<a href="{{ (printf "/authors/%s" (urlize .)) | relURL }}" class="post-author">{{ . }}</a>{{ end }}
       {{ end }}
       · {{ .ReadingTime }} min read
     </div>

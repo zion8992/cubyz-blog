@@ -8,8 +8,8 @@
         <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
         <div class="post-meta">
           {{ .Date.Format "Jan 2, 2006" }}
-          {{ with .Params.authors }} · by
-            {{ range $i, $a := . }}{{ if $i }}, {{ end }}<a href="{{ (printf "/authors/%s" (urlize .)) | relURL }}">{{ . }}</a>{{ end }}
+          {{ with .Params.authors }} - by
+            {{ range $i, $a := . }}{{ if $i }}, {{ end }}<a href="{{ (printf "/authors/%s" (urlize .)) | relURL }}" class="post-author">{{ . }}</a>{{ end }}
           {{ end }}
         </div>
       </li>

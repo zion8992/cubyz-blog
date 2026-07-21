@@ -23,6 +23,10 @@ theme = 'blog'
   name   = 'Authors'
   pageRef = '/authors'
   weight = 30
+[[menu.main]]
+  name   = 'Tags'
+  pageRef = '/tags'
+  weight = 30
 
 [markup.goldmark.renderer]
   unsafe = true   # allow raw HTML in markdown (optional, for demos)
