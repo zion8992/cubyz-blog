@@ -21,6 +21,14 @@
       document.documentElement.dataset.theme = next;
       localStorage.setItem('theme', next);
     });
+
+    const navToggle = document.querySelector('#nav-toggle');
+    const navMenu = document.querySelector('#nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      const open = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
   </script>
 </body>
 </html>
