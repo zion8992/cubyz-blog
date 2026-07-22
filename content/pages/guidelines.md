@@ -9,10 +9,11 @@ The idea of this blog is to have a place where Cubyz developers can write about 
 
 ## Rules
 
-1. No NSWF or Sexual Content
+1. No NSFW or Sexual Content
 2. Be nice
 3. No racism
-4. No publishing any copyrighted content
-5. Ask people for permission to use code snippets and images before using [^1]
+4. No harrasment or abuse
+5. No publishing any copyrighted content
+6. Ask people for permission to use code snippets and images before using [^1]
 
 [^1]: Code snippets excludes Cubyz source code or assets
