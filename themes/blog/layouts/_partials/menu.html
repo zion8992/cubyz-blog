@@ -1,5 +1,5 @@
 <nav>
-  <a class="site-title" href="/">{{ site.Title }}</a>
+  <a class="site-title" href="{{ "" | relURL }}">{{ site.Title }}</a>
   <button id="nav-toggle" aria-label="Open menu" aria-expanded="false"><i class="bi bi-list"></i></button>
   <ul id="nav-menu">
     {{ range site.Menus.main }}
