@@ -106,8 +106,8 @@ nav .site-title {
 /* Posts */
 /* ============== */
 
-.post-list {
-
+.post-list > * {
+  margin: 30px 0;
 }
 
 .post-item {
@@ -133,7 +133,7 @@ nav .site-title {
 
 /* post metadata */
 .post-meta {
-
+  font-size: 14px;
 }
 
 /* ============== */
@@ -164,6 +164,21 @@ nav .site-title {
   cursor: pointer;
   margin-left: auto;   /* sits at the right edge of the nav bar */
 }
+
+/* ============== */
+/* Hyperlink and Code */
+/* ============== */
+a {
+  color: var(--author);
+  text-decoration: underline dotted;
+}
+
+code {
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  padding: 3px;
+}
+
 
 /* ============== */
 /* Mobile */
@@ -204,3 +219,4 @@ nav .site-title {
     margin: 80px 1rem 0;     /* the 450px side margins would push content off-screen */
   }
 }
+
