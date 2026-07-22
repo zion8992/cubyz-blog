@@ -26,7 +26,7 @@ Test
 
 ## Images and Assets
 
-You can add your own assets, **under 800MB** at `assets/usercontent/<username>`. That folder is also yours to control.
+You can add your own assets, **under 100MB** at `assets/usercontent/<username>`. That folder is also yours to control.
 
 ## Publishing
 
