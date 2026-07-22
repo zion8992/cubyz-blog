@@ -53,7 +53,8 @@ For video and audio, you must use external services like [youtube](https://youtu
 
 #### Under 50MB
 
-You can add your own **image** assets, **under 50MB** at `assets/usercontent/<username>`. You have a **quota of 250MB** in total.
+You can add your own **image** assets, **under 50MB** at `static/static/<username>`. You have a **quota of 250MB** in total.
+**NOTE**: The second `/static/` in the path is correct!          ^^^^^^ -----> Not a typo
 
 #### Over 50MB
 
