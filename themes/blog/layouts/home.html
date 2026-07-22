@@ -15,4 +15,20 @@
       </li>
     {{ end }}
   </ul>
+
+  <h2>Guides</h2>
+
+  <ul class="post-list">
+    {{ range first 10 (where site.RegularPages "Section" "pages") }}
+      <li class="post-item">
+        <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <div class="post-meta">
+          {{ .Date.Format "Jan 2, 2006" }}
+          {{ with .Params.authors }} - by
+            {{ range $i, $a := . }}{{ if $i }}, {{ end }}<a href="{{ (printf "/authors/%s" (urlize .)) | relURL }}" class="post-author">{{ . }}</a>{{ end }}
+          {{ end }}
+        </div>
+      </li>
+    {{ end }}
+  </ul>
 {{ end }}

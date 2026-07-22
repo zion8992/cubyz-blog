@@ -27,6 +27,7 @@ body {
   font-family: "IBM Plex Mono", monospace;
   background-color: var(--bg);
   color: var(--color);
+  padding-bottom: 500px;
 }
 
 /* ============== */
@@ -174,10 +175,29 @@ a {
 }
 
 code {
-  border-radius: 3px;
-  font-family: "Courier New", monospace;
+  font-size: 17px;
   padding: 3px;
 }
+
+code:not([class]) {
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+  font-size: 17px;
+  padding: 3px;
+
+  /* mix 30% white in, then knock 40% opacity off */
+  background: color-mix(
+    in srgb,
+    color-mix(in srgb, var(--bg), white 30%),
+    transparent 40%
+  );
+  border: 1px solid color-mix(
+    in srgb,
+    color-mix(in srgb, var(--bg), white 50%),
+    transparent 40%
+  );
+}
+
 
 
 /* ============== */
