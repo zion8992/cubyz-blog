@@ -14,6 +14,6 @@ The idea of this blog is to have a place where Cubyz developers can write about 
 3. No racism
 4. No harrasment or abuse
 5. No publishing any copyrighted content
-6. Ask people for permission to use code snippets and images before using [^1]
+6. Ask people for permission to use code and images before using [^1]
 
-[^1]: Code snippets excludes Cubyz source code or assets
+[^1]: Cubyz Code and Assets are free-to-use.
